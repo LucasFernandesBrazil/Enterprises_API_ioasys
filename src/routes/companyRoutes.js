@@ -7,6 +7,7 @@ router
   .get("/companys", CompanyController.companysList)
   .get("/companys/:id", CompanyController.companyListByID)
   .post("/companys", CompanyController.companyRegister)
-  .put("/companys/:id", CompanyController.companyUpdate);
+  .put("/companys/:id", CompanyController.companyUpdate)
+  .delete("/companys/:id", CompanyController.companyDelete);
 
 export default router;
