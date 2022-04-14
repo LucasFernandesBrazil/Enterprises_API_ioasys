@@ -1,5 +1,5 @@
 import express from "express";
-import companys from "../models/Company.js";
+import companyRoutes from "./companyRoutes.js"
 
 const routes = (app) => {
     app.route('/').get((req, res) => {
@@ -8,7 +8,7 @@ const routes = (app) => {
 
     app.use(
         express.json(),
-        companys
+        companyRoutes
     )
 }
 
