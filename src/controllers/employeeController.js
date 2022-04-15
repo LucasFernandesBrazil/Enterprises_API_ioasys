@@ -61,6 +61,15 @@ class employeeController {
       }
     });
   };
+
+  static listEmployeeByCompany = (req, res) => {
+    const company = req.query.company;
+
+    employee.f;
+    employee.find({ company: company }, {}, (err, employee) => {
+      res.status(200).send(employee);
+    });
+  };
 }
 
 export default employeeController;
