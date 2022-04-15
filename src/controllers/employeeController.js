@@ -3,22 +3,28 @@ import employee from "../models/Employee.js";
 
 class employeeController {
   static employeeList = (req, res) => {
-    employee.find((err, employee) => {
-      res.status(200).json(employee);
-    });
+    employee
+      .find()
+      .populate("empresa")
+      .exec((err, employee) => {
+        res.status(200).json(employee);
+      });
   };
 
   static employeeListByID = (req, res) => {
     const id = req.params.id;
-    employee.findById(id, (err, employee) => {
-      if (!err) {
-        res.status(200).send(employee);
-      } else {
-        res
-          .status(400)
-          .send({ message: `${err.message} - Employee id not found.` });
-      }
-    });
+    employee
+      .findById(id)
+      .populate("empresa", "nome")
+      .exec((err, employee) => {
+        if (!err) {
+          res.status(200).send(employee);
+        } else {
+          res
+            .status(400)
+            .send({ message: `${err.message} - Employee id not found.` });
+        }
+      });
   };
 
   static employeeRegister = (req, res) => {

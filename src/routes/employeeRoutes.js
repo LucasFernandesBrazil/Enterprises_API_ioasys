@@ -4,10 +4,10 @@ import EmployeeController from "../controllers/employeeController.js";
 const router = express.Router();
 
 router
-  .get("/employee", EmployeeController.employeeList)
-  .get("/employee/:id", EmployeeController.employeeListByID)
-  .post("/employee", EmployeeController.employeeRegister)
-  .put("/employee/:id", EmployeeController.employeeUpdate)
-  .delete("/employee/:id", EmployeeController.employeeDelete);
+  .get("/employees", EmployeeController.employeeList)
+  .get("/employees/:id", EmployeeController.employeeListByID)
+  .post("/employees", EmployeeController.employeeRegister)
+  .put("/employees/:id", EmployeeController.employeeUpdate)
+  .delete("/employees/:id", EmployeeController.employeeDelete);
 
 export default router;
