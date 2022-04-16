@@ -5,7 +5,7 @@ const router = express.Router();
 
 router
   .get("/employees", EmployeeController.employeeList)
-  .get("/employees/search", EmployeeController.listEmployeeByCompany)
+  .get("/employees/search", EmployeeController.listEmployeeByDepartment)
   .get("/employees/:id", EmployeeController.employeeListByID)
   .post("/employees", EmployeeController.employeeRegister)
   .put("/employees/:id", EmployeeController.employeeUpdate)

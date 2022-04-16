@@ -62,14 +62,17 @@ class employeeController {
     });
   };
 
-  static listEmployeeByCompany = (req, res) => {
-    const company = req.query.company;
+  static listEmployeeByDepartment = (req, res) => {
+    const department = req.query.department;
 
-    employee.f;
-    employee.find({ company: company }, {}, (err, employee) => {
-      res.status(200).send(employee);
-    });
-  };
+    employee.find({ department: { _id: department } }, {}, (err, employee) => {
+      if (!err){
+        res.status(200).send(employee)
+      }else {
+        res.status(500).send({ message: err.message });
+      }
+    })
+  }
 }
 
 export default employeeController;
