@@ -5,9 +5,10 @@ const employeeSchema = new mongoose.Schema(
     id: { type: String },
     nome: { type: String, required: true },
     nacionalidade: { type: String },
-    empresa: {
+    CPF: { type: String },
+    department: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "companys",
+      ref: "departments",
       required: true,
     },
   },

@@ -5,7 +5,7 @@ class employeeController {
   static employeeList = (req, res) => {
     employee
       .find()
-      .populate("empresa")
+      .populate("department")
       .exec((err, employee) => {
         res.status(200).json(employee);
       });
@@ -15,7 +15,7 @@ class employeeController {
     const id = req.params.id;
     employee
       .findById(id)
-      .populate("empresa", "nome")
+      .populate("department", "nome")
       .exec((err, employee) => {
         if (!err) {
           res.status(200).send(employee);

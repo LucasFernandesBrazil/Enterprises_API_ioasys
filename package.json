@@ -21,6 +21,8 @@
   "homepage": "https://github.com/LucasFernandesBrazil/Enterprises_API_ioasys#readme",
   "dependencies": {
     "express": "^4.17.3",
+    "express-jwt": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.6"
   },
   "devDependencies": {
