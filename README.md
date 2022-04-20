@@ -17,7 +17,7 @@ npm run dev
 
 Read the API documentation:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/c20e7b69fb902d3266b5?action=collection%2Fimport)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/flight-engineer-39276032/workspace/lucas-workspace/collection/18389441-f373d2ea-ddf2-4fb8-8359-5f8f8f0d3aec?action=share&creator=18389441)
 
 ## LICENSE
 
